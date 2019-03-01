@@ -129,7 +129,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="8e6-t8-7Ax"/>
-                                    <barButtonItem systemItem="add" id="3zs-JG-jPP"/>
+                                    <barButtonItem systemItem="add" id="3zs-JG-jPP">
+                                        <connections>
+                                            <action selector="addBarButtonPressed:" destination="65c-Xg-ZKm" id="ovj-3n-I9h"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
