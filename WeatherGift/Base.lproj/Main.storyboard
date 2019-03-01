@@ -123,7 +123,11 @@
                                     <constraint firstAttribute="height" constant="44" id="Y3i-aQ-lab"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Edit" id="nmE-E8-pUB"/>
+                                    <barButtonItem title="Edit" id="nmE-E8-pUB">
+                                        <connections>
+                                            <action selector="editBarButtonPressed:" destination="65c-Xg-ZKm" id="XCy-61-ulw"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="8e6-t8-7Ax"/>
                                     <barButtonItem systemItem="add" id="3zs-JG-jPP"/>
                                 </items>
@@ -142,6 +146,8 @@
                         <viewLayoutGuide key="safeArea" id="TvZ-65-JXQ"/>
                     </view>
                     <connections>
+                        <outlet property="addBarButton" destination="3zs-JG-jPP" id="xfT-3t-nmW"/>
+                        <outlet property="editBarButton" destination="nmE-E8-pUB" id="zMz-Bc-2bU"/>
                         <outlet property="tableView" destination="hd4-bc-sVu" id="qJi-6D-3dG"/>
                     </connections>
                 </viewController>
