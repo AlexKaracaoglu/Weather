@@ -20,6 +20,21 @@ class DayWeatherCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func update(with dailyForecast: WeatherLocation.DailyForecast, timeZone: String) {
+        dayCellIcon.image = UIImage(named: dailyForecast.dailyIcon)
+        
+        let usableDate = Date(timeIntervalSince1970: dailyForecast.dailyDate)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        dateFormatter.timeZone = TimeZone(identifier: timeZone)
+        let dateString = dateFormatter.string(from: usableDate)
+        dayCellWeekday.text = dateString
+        
+        dayCellSummary.text = dailyForecast.dailySummary
+        dayCellMaxTemp.text = String(format: "%3.f", dailyForecast.dailyMaxTemp) + "°"
+        dayCellMinTemp.text = String(format: "%3.f", dailyForecast.dailyMinTemp) + "°"
+    }
+    
     
 
 }
