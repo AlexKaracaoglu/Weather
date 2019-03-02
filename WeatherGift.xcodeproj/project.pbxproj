@@ -16,6 +16,7 @@
 		BF5F23992229890A006EEE33 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F23982229890A006EEE33 /* ListVC.swift */; };
 		BF5F239B22298AE8006EEE33 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F239A22298AE8006EEE33 /* PageVC.swift */; };
 		BF5F239F2229D914006EEE33 /* WeatherLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F239E2229D914006EEE33 /* WeatherLocation.swift */; };
+		BF5F23A1222AD9E7006EEE33 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F23A0222AD9E7006EEE33 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BF5F23982229890A006EEE33 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		BF5F239A22298AE8006EEE33 /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 		BF5F239E2229D914006EEE33 /* WeatherLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLocation.swift; sourceTree = "<group>"; };
+		BF5F23A0222AD9E7006EEE33 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D6920BAF768AE44A0106B3AF /* Pods-WeatherGift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherGift.debug.xcconfig"; path = "Target Support Files/Pods-WeatherGift/Pods-WeatherGift.debug.xcconfig"; sourceTree = "<group>"; };
 		FF7F22554E53E8BA49E9551B /* Pods-WeatherGift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherGift.release.xcconfig"; path = "Target Support Files/Pods-WeatherGift/Pods-WeatherGift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				BF5F23842229861C006EEE33 /* AppDelegate.swift */,
+				BF5F239E2229D914006EEE33 /* WeatherLocation.swift */,
 				BF5F239A22298AE8006EEE33 /* PageVC.swift */,
 				BF5F23962229867C006EEE33 /* DetailVC.swift */,
 				BF5F23982229890A006EEE33 /* ListVC.swift */,
@@ -92,7 +95,7 @@
 				BF5F238B2229861F006EEE33 /* Assets.xcassets */,
 				BF5F238D2229861F006EEE33 /* LaunchScreen.storyboard */,
 				BF5F23902229861F006EEE33 /* Info.plist */,
-				BF5F239E2229D914006EEE33 /* WeatherLocation.swift */,
+				BF5F23A0222AD9E7006EEE33 /* Constants.swift */,
 			);
 			path = WeatherGift;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				BF5F239B22298AE8006EEE33 /* PageVC.swift in Sources */,
 				BF5F23852229861C006EEE33 /* AppDelegate.swift in Sources */,
 				BF5F23972229867C006EEE33 /* DetailVC.swift in Sources */,
+				BF5F23A1222AD9E7006EEE33 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
