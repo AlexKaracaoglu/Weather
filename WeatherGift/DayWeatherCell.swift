@@ -8,6 +8,12 @@
 
 import UIKit
 
+private let dateFormatter: DateFormatter = {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEEE"
+    return dateFormatter
+}()
+
 class DayWeatherCell: UITableViewCell {
 
     @IBOutlet weak var dayCellIcon: UIImageView!
@@ -23,11 +29,7 @@ class DayWeatherCell: UITableViewCell {
     func update(with dailyForecast: WeatherLocation.DailyForecast, timeZone: String) {
         dayCellIcon.image = UIImage(named: dailyForecast.dailyIcon)
         
-        let usableDate = Date(timeIntervalSince1970: dailyForecast.dailyDate)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE"
-        dateFormatter.timeZone = TimeZone(identifier: timeZone)
-        let dateString = dateFormatter.string(from: usableDate)
+        let dateString = dailyForecast.dailyDate.format(timeZone: timeZone, dateFormatter: dateFormatter)
         dayCellWeekday.text = dateString
         
         dayCellSummary.text = dailyForecast.dailySummary

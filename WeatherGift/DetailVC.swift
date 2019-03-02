@@ -9,6 +9,12 @@
 import UIKit
 import CoreLocation
 
+private let dateFormatter: DateFormatter = {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEEE, MMM dd, y"
+    return dateFormatter
+}()
+
 class DetailVC: UIViewController {
 
     @IBOutlet weak var dateLabel: UILabel!
@@ -44,21 +50,12 @@ class DetailVC: UIViewController {
     func updateUserInterface() {
         let location = locationsArray[currentPage]
         locationLabel.text = location.name
-        let dateString = formatTimeForTimeZone(unixTime: location.currentTime, timeZone: location.timeZone)
+        let dateString = location.currentTime.format(timeZone: location.timeZone, dateFormatter: dateFormatter)
         dateLabel.text = dateString
         temperatureLabel.text = location.currentTemp
         summaryLabel.text = location.currentSummary
         currentImage.image = UIImage(named: location.currentIcon)
         tableView.reloadData()
-    }
-    
-    func formatTimeForTimeZone(unixTime: TimeInterval, timeZone: String) -> String {
-        let usableDate = Date(timeIntervalSince1970: unixTime)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE, MMM dd, y"
-        dateFormatter.timeZone = TimeZone(identifier: timeZone)
-        let dateString = dateFormatter.string(from: usableDate)
-        return dateString
     }
 
 }
