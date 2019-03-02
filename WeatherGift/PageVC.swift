@@ -47,6 +47,7 @@ class PageVC: UIPageViewController {
         
         pageControl.pageIndicatorTintColor = UIColor.lightGray
         pageControl.currentPageIndicatorTintColor = UIColor.black
+        pageControl.backgroundColor = UIColor.white
         pageControl.numberOfPages = locationsArray.count
         pageControl.currentPage = currentPage
         view.addSubview(pageControl)
