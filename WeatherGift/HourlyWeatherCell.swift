@@ -21,7 +21,7 @@ class HourlyWeatherCell: UICollectionViewCell {
     @IBOutlet weak var hourlyTemp: UILabel!
     @IBOutlet weak var hourlyPrecipProb: UILabel!
     
-    func update(with hourlyForecast: WeatherLocation.HourlyForecast, timeZone: String) {
+    func update(with hourlyForecast: WeatherDetail.HourlyForecast, timeZone: String) {
         let dateString = hourlyForecast.hourlyTime.format(timeZone: timeZone, dateFormatter: dateFormatter)
         hourlyTime.text = dateString
         hourlyTemp.text = String(format: "%3.f", hourlyForecast.hourlyTemperature) + "°"
